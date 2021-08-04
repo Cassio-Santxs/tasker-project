@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
 
-  border: 5px solid var(--secondaryColor) ;
+  
   display: grid;
   grid-template-columns: 1fr;
   margin-top: -10rem;
@@ -23,7 +23,7 @@ export const Content = styled.div`
     display: flex;
     padding: 1.5rem 0;
     justify-content: center;
-    border: 5px solid var(--secondaryColor);
+    border-bottom: 5px solid var(--secondaryColor);
     font-size: 1.3rem;
 
     border-radius: 0.25rem;

@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
   --secondaryColor: #fff2a6;
   --tertiaryColor: #ffc6bf;
   --white: #ffffff;
+  --bodyBackground: #F3F3F3;
   --black: #000000;
 }
 
@@ -28,7 +29,7 @@ html {
   }
 
 body {
-  background: var(--white);
+  background: var(--bodyBackground);
   -webkit-font-smoothing: antialiased;
 }
 

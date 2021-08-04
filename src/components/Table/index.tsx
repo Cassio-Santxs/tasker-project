@@ -1,11 +1,19 @@
 import { Container, Content } from './styles'
 import binImg from '../../assets/bin.svg'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { api } from '../../services/api'
 
+interface Task {
+  id: number
+  taskTitle: string
+  when: string
+}
+
 export function Table() {
+  const [tasks, setTasks] = useState<Task[]>([])
+
   useEffect(() => {
-    api.get('/tasks').then(response => console.log(response.data))
+    api.get('/tasks').then(response => setTasks(response.data.tasks))
   }, [])
 
   return (
@@ -23,32 +31,20 @@ export function Table() {
                 <strong>Task</strong>
               </th>
               <th>
-                <strong>Hour</strong>
+                <strong>When</strong>
               </th>
             </tr>
           </thead>
 
           <tbody>
-            <tr>
-              <td>Dentist</td>
-              <td>07:00</td>
-              <input type="checkbox" name="taskHandle" />
-              <img src={binImg} alt="bin icon" />
-            </tr>
-
-            <tr>
-              <td>Homework</td>
-              <td>14:00</td>
-              <input type="checkbox" name="taskHandle" />
-              <img src={binImg} alt="bin icon" />
-            </tr>
-
-            <tr>
-              <td>Piano</td>
-              <td>17:00</td>
-              <input type="checkbox" name="taskHandle" />
-              <img src={binImg} alt="bin icon" />
-            </tr>
+            {tasks.map(task => (
+              <tr key={task.id}>
+                <td>{task.taskTitle}</td>
+                <td>{task.when}</td>
+                <input type="checkbox" name="taskHandle" />
+                <img src={binImg} alt="bin icon" />
+              </tr>
+            ))}
           </tbody>
         </table>
       </Content>

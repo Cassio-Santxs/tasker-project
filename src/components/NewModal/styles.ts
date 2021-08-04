@@ -50,7 +50,7 @@ button[type="submit"] {
   font-size: 1rem;
   margin-top: 1.5rem;
   font-weight: 600;
-  transition: filter 0.2s;
+  transition: all 0.2s;
   display: flex;
   text-align: center;
   margin: 1rem auto;
@@ -58,7 +58,7 @@ button[type="submit"] {
   
 
   &:hover {
-    filter: brightness(0.9);
+    transform: scale(1.05);
   }
 }
 

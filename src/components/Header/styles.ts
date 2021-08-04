@@ -38,7 +38,7 @@ export const Content = styled.div`
   }
 
   button:hover {
-    transform: scale(1.04);
+    transform: scale(1.05);
   }
 
 `
