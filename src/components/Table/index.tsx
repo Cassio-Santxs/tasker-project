@@ -1,7 +1,13 @@
 import { Container, Content } from './styles'
 import binImg from '../../assets/bin.svg'
+import { useEffect } from 'react'
+import { api } from '../../services/api'
 
 export function Table() {
+  useEffect(() => {
+    api.get('/tasks').then(response => console.log(response.data))
+  }, [])
+
   return (
     <Container>
       <Content>

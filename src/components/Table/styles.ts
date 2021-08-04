@@ -12,8 +12,9 @@ export const Container = styled.div`
 
 export const Content = styled.div`
 
+  
   background: var(--white);
-  padding: 1.75rem;
+  padding: 2rem;
   border-radius: 0.25rem;
 
   header {
@@ -22,12 +23,12 @@ export const Content = styled.div`
     display: flex;
     padding: 1.5rem 0;
     justify-content: center;
-    border-bottom: 5px solid var(--secondaryColor);
+    border: 5px solid var(--secondaryColor);
     font-size: 1.3rem;
 
     border-radius: 0.25rem;
     margin-bottom: 5rem;
-    margin-top: 1.5rem;
+    margin-top: 0rem;
 
     }
 
@@ -39,6 +40,7 @@ export const Content = styled.div`
     width: 100%;
     border-spacing: 0 0.5rem;
     margin-bottom: 1.1rem;
+    
 
     tbody tr {
       border-bottom: 7px solid var(--white);
